@@ -1,0 +1,19 @@
+# rsync
+1 * * * * rsync -avzP root@172.31.95.15::backup /home/backup/172.31.95.15 >> /home/backup/172.31.95.15/rsync.log 2>&1
+
+# slave backup
+PATH=/usr/local/bin/pypy-2.6.0/bin:$PATH
+
+#24 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6379 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+10 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6380 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+11 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6381 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+12 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6382 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+13 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6383 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+14 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6384 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+15 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6385 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+16 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6386 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+17 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6387 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+20 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6400 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+21 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6401 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+22 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6402 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1
+#23 */4 * * * pypy /home/redis/ddz/script/tool/cron_redis.py 127.0.0.1 6403 /home/redis/rdb /home/backup >>/home/backup/cron_redis.log 2>&1

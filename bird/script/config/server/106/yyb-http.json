@@ -1,0 +1,33 @@
+{
+    "id": 1,
+    "name": "bird",
+    "mode": 3,
+    "corporation": "qifan",
+    "http.port": 443,
+    "tcp.port": 443,
+    "game.list": [2],
+    "http.sdk": "http://39.103.150.106:443",
+    "http.game": "http://39.103.150.106:9006",
+    "debug": ["redis", "network", "debug"],
+    "servers": {
+        "bird-1": {"internet": "39.103.150.106", "intranet": "127.0.0.1"}
+    },
+    "config.file": "config/default.py",
+    "startup": ["yyb"],
+    "process": [
+        {"type": "yyb", "id": 2000, "server": "bird-1", "desc": "http server for yyb"}
+    ],
+    "redis": {
+        "config": {"host": "127.0.0.1", "port": 6379, "db": 14},
+        "mix": {"host": "127.0.0.1", "port": 6379, "db": 1},
+        "cluster": [
+            {"host": "127.0.0.1", "port": 6379, "db": 2}
+        ],
+        "pay": {"host": "127.0.0.1", "port": 6379, "db": 3},
+        "stat": {"host": "127.0.0.1", "port": 6379, "db": 4},
+        "cache": {"host": "127.0.0.1", "port": 6379, "db": 5},
+	    "activity": {"host": "127.0.0.1", "port": 6379, "db": 6},
+	    "record": {"host": "127.0.0.1", "port":6379, "db":7},
+        "match": {"host": "127.0.0.1", "port": 6379, "db": 8}
+    }
+}

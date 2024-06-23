@@ -1,0 +1,30 @@
+{
+    "id": 1,
+    "name": "bird",
+    "mode": 3,
+    "corporation": "qifan",
+    "http.port": 18080,
+    "tcp.port": 19002,
+    "game.list": [2],
+    "http.sdk": "http://192.168.1.35:18080",
+    "http.game": "http://192.168.1.35:19006",
+    "debug": ["redis", "network", "debug"],
+    "servers": {
+        "bird-1": {"internet": "192.168.1.35", "intranet": "192.168.1.35"}
+    },
+    "config.file": "config/default.py",
+    "startup": ["sdk"],
+    "process": [
+        {"type": "sdk", "id": 80, "server": "bird-1", "desc": "sdk server"}
+    ],
+    "redis": {
+        "config": {"host": "127.0.0.1", "port": 6380, "db": 11},
+        "mix": {"host": "127.0.0.1", "port": 6380, "db": 1},
+        "cluster": [
+            {"host": "127.0.0.1", "port": 6380, "db": 2}
+        ],
+        "pay": {"host": "127.0.0.1", "port": 6380, "db": 3},
+        "stat": {"host": "127.0.0.1", "port": 6380, "db": 4},
+        "cache": {"host": "127.0.0.1", "port": 6380, "db": 5}
+    }
+}

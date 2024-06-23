@@ -1,0 +1,57 @@
+{
+    "id": 1,
+    "name": "bird",
+    "mode": 1,
+    "corporation": "qifan",
+    "http.port": 8080,
+    "tcp.port": 9002,
+    "http.sdk": "http://lybird.youxi456.com:8080",
+    "http.game": "http://lybird.youxi456.com:9006",
+    "debug": ["debug"],
+    "servers": {
+        "bird-1": {"domain": "lybird.youxi456.com", "internet": "101.200.186.126", "intranet": "10.44.171.87"}
+    },
+    "config.file": "config/default.py",
+    "startup": ["game", "quick", "connect", "http", "entity", "proxy"],
+    "process": [
+        {"type": "quick", "id": 200, "server": "bird-1", "desc": "quick start server"},
+        {"type": "entity", "id": 300, "server": "bird-1", "desc": "entity server"},
+        {"type": "http", "id": 400, "server": "bird-1", "desc": "http server"},
+        {"type": "proxy", "id": 500, "server": "bird-1", "desc": "proxy server"},
+        {"type": "connect", "id": 1000, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1002, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1004, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1006, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1008, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1010, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1012, "server": "bird-1", "desc": "connect server"},
+        {"type": "connect", "id": 1014, "server": "bird-1", "desc": "connect server"},
+        {"type": "game", "id": 20000, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20002, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20004, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20006, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20008, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20010, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20012, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20014, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20016, "server": "bird-1", "desc": "game server"},
+        {"type": "game", "id": 20018, "server": "bird-1", "desc": "game server"}
+    ],
+    "redis": {
+        "config": {"host": "10.44.169.141", "port": 26379, "db": 0},
+        "cluster": [
+            {"host": "10.44.169.141", "port": 26380, "db": 0},
+            {"host": "10.44.169.141", "port": 26381, "db": 0},
+            {"host": "10.44.169.141", "port": 26382, "db": 0},
+            {"host": "10.44.169.141", "port": 26383, "db": 0},
+            {"host": "10.44.169.141", "port": 26384, "db": 0},
+            {"host": "10.44.169.141", "port": 26385, "db": 0},
+            {"host": "10.44.169.141", "port": 26386, "db": 0},
+            {"host": "10.44.169.141", "port": 26387, "db": 0}
+        ],
+        "mix": {"host": "10.44.169.141", "port": 26400, "db": 0},
+        "pay": {"host": "10.44.169.141", "port": 26401, "db": 0},
+        "stat": {"host": "10.44.169.141", "port": 26402, "db": 0},
+        "cache": {"host": "10.44.169.141", "port": 26403, "db": 0}
+    }
+}

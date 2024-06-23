@@ -1,0 +1,37 @@
+{
+    "id": 1,
+    "name": "bird",
+    "mode": 2,
+    "corporation": "qifan",
+    "http.port": 8080,
+    "tcp.port": 9002,
+    "game.list": [2],
+    "http.sdk": "http://101.200.195.156:8080",
+    "http.game": "http://101.200.195.156:9006",
+    "debug": ["redis", "network", "debug"],
+    "servers": {
+        "bird-1": {"internet": "101.200.195.156", "intranet": "10.44.165.55"}
+    },
+    "config.file": "config/default.py",
+    "startup": ["sdk"],
+    "process": [
+        {"type": "sdk", "id": 80, "server": "bird-1", "desc": "sdk server"}
+    ],
+    "redis": {
+        "config": {"host": "10.44.165.55", "port": 9527, "db": 11},
+        "mix": {"host": "10.44.165.55", "port": 9527, "db": 1},
+        "cluster": [
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2},
+            {"host": "10.44.165.55", "port": 9527, "db": 2}
+        ],
+        "pay": {"host": "10.44.165.55", "port": 9527, "db": 3},
+        "stat": {"host": "10.44.165.55", "port": 9527, "db": 4},
+        "cache": {"host": "10.44.165.55", "port": 9527, "db": 5}
+    }
+}
